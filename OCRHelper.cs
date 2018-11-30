@@ -21,7 +21,7 @@ namespace ParsePdf
 			var queryString = HttpUtility.ParseQueryString(string.Empty);
             queryString["language"] = "unk";
             queryString["detectOrientation "] = "true";
-            var url = "https://" + endpoint + "/vision/v1.0/ocr?" + queryString;
+            var url = endpoint + "/vision/v1.0/ocr?" + queryString;
             var request = WebRequest.Create(url) as HttpWebRequest;
 
             if (request != null)
